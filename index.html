@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almma Hospital - Your Health Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header role="banner" class="bg-white shadow-md sticky top-0 z-50">
+        <nav role="navigation" class="container mx-auto px-6 py-0 flex justify-between items-center">
+            <a> <img src="../images/logo -1.webp" alt="Almma Hospital Logo" srcset=""></a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-emerald-600">About Us</a>
+                <a href="#branches" class="text-gray-600 hover:text-emerald-600">Our Branches</a>
+                <a href="#therapy-centers" class="text-gray-600 hover:text-emerald-600">Therapy Centers</a>
+                <a href="#product-combo" class="text-gray-600 hover:text-emerald-600">Products</a>
+                <a href="#contact" class="btn btn-primary ml-6">Book an Appointment</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center" aria-label="Open mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-emerald-600">About Us</a>
+            <a href="#branches" class="block py-2 text-gray-600 hover:text-emerald-600">Our Branches</a>
+            <a href="#therapy-centers" class="block py-2 text-gray-600 hover:text-emerald-600">Therapy Centers</a>
+            <a href="#product-combo" class="block py-2 text-gray-600 hover:text-emerald-600">Products</a>           
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-emerald-600">Book an Appointment</a>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero Banner / Slider -->
+        <section id="hero" role="region" aria-labelledby="hero-heading" class="relative w-full h-96 md:h-[500px] overflow-hidden">
+            <h2 id="hero-heading" class="sr-only">Hero Banner</h2>
+            <div id="slider" class="relative h-full">
+                <!-- Slide 1 -->
+                <div class="slider-item active h-full" role="group" aria-roledescription="slide">
+                    <img src="../images/Therapeutic Wellness.webp" alt="A person receiving therapeutic wellness treatment." class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center p-6">
+                        <h1 class="text-3xl md:text-5xl font-bold animate-fade-in-down">Compassionate & Expert Care</h1>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl animate-fade-in-up">Your health and well-being are our top priorities. We are here for you.</p>
+                        <a href="#contact" class="btn btn-primary mt-8">Book an Appointment</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slider-item h-full" role="group" aria-roledescription="slide">
+                    <img src="../images/About 2.webp" alt="A serene image representing rejuvenation." class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center p-6">
+                        <h1 class="text-3xl md:text-5xl font-bold">State-of-the-Art Technology</h1>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl">Utilizing the latest medical advancements for accurate diagnosis and treatment.</p>
+                        <a href="#about" class="btn btn-primary mt-8">Learn More</a>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slider-item h-full" role="group" aria-roledescription="slide">
+                    <img src="../images/Most valuable and unique.webp" alt="A collage of valuable and unique items." class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center p-6">
+                        <h1 class="text-3xl md:text-5xl font-bold">A Team That Cares</h1>
+                        <p class="mt-4 text-lg md:text-xl max-w-2xl">Our dedicated professionals are committed to your recovery and comfort.</p>
+                        <a href="#contact" class="btn btn-primary mt-8">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <button id="prev-slide" aria-label="Previous slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="next-slide" aria-label="Next slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" role="region" aria-labelledby="about-heading" class="py-12 md:py-48 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 id="about-heading" class="text-3xl font-bold text-emerald-800 mb-4">About Almma Hospital</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Almma Hospital has been a cornerstone of community health for over two decades. Our mission is to provide exceptional, patient-centered care with a commitment to compassion, innovation, and excellence. We believe in treating every patient like family.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our team of board-certified physicians, skilled nurses, and dedicated staff work together to offer a comprehensive range of medical services. From routine check-ups to advanced surgical procedures, we are equipped to handle all your healthcare needs.
+                        </p>
+                        <a href="httpshttps://www.almaherbal.com/our-branches" class="btn btn-primary mt-6">Read More</a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="../images/about.png" alt="A team of doctors at Almma Hospital." class="rounded-lg shadow-lg w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Branches -->
+        <section id="branches" role="region" aria-labelledby="branches-heading" class="py-12 md:py-20 ">
+            <div class="container mx-auto px-6 pt-12">
+                <h2 id="branches-heading" class="text-3xl font-bold text-center text-emerald-800 mb-10">Our Branches</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Branch Card 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/chennai.jpg" alt="Chennai Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Chennai (Saidapet)</h3>
+                            <p class="text-gray-600 mt-2">#10, Pillaiyar Koil Street, Saidapet, Chennai - 600015. (Opposite to TML Party Hall)</p>
+                        </div>
+                    </div>
+                    <!-- Branch Card 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/krishnagiri.jpg" alt="Krishnagiri Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Krishnagiri</h3>
+                            <p class="text-gray-600 mt-2">Door No:-2/24 Mel Pudur Main Road, Next to PNS Institute, Krishnagiri-635001.</p>
+                        </div>
+                    </div>
+                    <!-- Branch Card 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/dharmapuri.jpg" alt="Dharmapuri Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Dharmapuri</h3>
+                            <p class="text-gray-600 mt-2">Raja Gounder Street, Senthil Nagar, Salem Main Road, Near Ration Shop, Dharmapuri-636705.</p>
+                        </div>
+                    </div>
+                    <!-- Branch Card 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/selam.jpeg" alt="Salem Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Salem</h3>
+                            <p class="text-gray-600 mt-2">No:109/2 Kennady Nagar, Subramaniya Nagar, First Gate, Suramangalam,Salem-636005.</p>
+                        </div>
+                    </div>
+                    <!-- Branch Card 5 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/erode.jpg" alt="Erode Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Erode</h3>
+                            <p class="text-gray-600 mt-2">No:14,Muthu Vellappa Street, Near Hari Bala Mall Silks, Kaikolar Thottam,Erode-638001.</p>
+                        </div>
+                    </div>
+                    <!-- Branch Card 6 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="aspect-video">
+                            <img src="../images/tiruppur.jpeg" alt="Tiruppur Branch" class="w-full h-full object-cover object-center">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-emerald-700">Tiruppur</h3>
+                            <p class="text-gray-600 mt-2">B-9, KM Towers, Kangayam Cross Road, Kottai Mariamman Kovil Arch, Tiruppur-641604.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="https://www.almaherbal.com/our-branches" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View All Branches</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Therapy Centers Section -->
+        <section id="therapy-centers" class="py-20 px-6 bg-gray-50">
+            <div class="max-w-6xl mx-auto pt-12">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900">Specialized Therapy Centers</h2>
+                    <p class="mt-4 text-lg text-gray-600">Expert care for your physical and mental well-being.</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- Physical Therapy Card -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="aspect-video">
+                            <img class="w-full h-full object-cover object-center" src="../images/Vela -3.webp" alt="Physical Therapy Session">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-emerald-600 uppercase tracking-wide font-semibold">Holistic Recovery</p>
+                            <h3 class="mt-2 text-2xl font-bold text-gray-900">Physical Therapy</h3>
+                            <p class="mt-4 text-gray-600">Our physical therapy center helps patients recover from injury, surgery, and chronic conditions. We create personalized treatment plans to restore movement, reduce pain, and improve your quality of life.</p>
+                            <div class="mt-6">
+                                <a href="#" class="bg-emerald-500 text-white px-6 py-3 rounded-full hover:bg-emerald-600 transition-colors duration-300">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mental Wellness Card -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="aspect-video">
+                            <img class="w-full h-full object-cover object-center" src="../images/09.jpg" alt="Mental Wellness Session">
+                        </div>
+                        <div class="p-6">
+                            <p class="text-sm text-emerald-600 uppercase tracking-wide font-semibold">Compassionate Support</p>
+                            <h3 class="mt-2 text-2xl font-bold text-gray-900">Mental Wellness</h3>
+                            <p class="mt-4 text-gray-600">We provide confidential and compassionate support for mental health challenges. Our services include counseling, therapy, and stress management programs tailored to your needs.</p>
+                            <div class="mt-6">
+                                <a href="#" class="bg-emerald-500 text-white px-6 py-3 rounded-full hover:bg-emerald-600 transition-colors duration-300">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Almma Product Combo -->
+        <section id="product-combo" role="region" aria-labelledby="product-combo-heading" class="py-12 md:py-20 bg-gray-100">
+            <div class="max-w-screen-2xl mx-auto px-6 pt-12" >
+                <h2 id="product-combo-heading" class="text-3xl font-bold text-center text-emerald-800 mb-10">Almma Health Products Combo</h2>
+                <div class="relative">
+                    <div id="product-container" class="overflow-hidden">
+                        <div id="product-carousel" role="group" class="flex gap-8 transition-transform duration-500 ease-in-out">
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Cool Juice 01.jpg" alt="Vitamin C Boost" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6  px-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Vitamin C Boost</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Immune Support Formula</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">200 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                            <!-- Product 2 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Adathodai-1.jpg" alt="Calming Herbal Tea" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Calming Herbal Tea</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Relax and Unwind</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">186 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                            <!-- Product 3 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Adhimathuram Powder-1.jpg" alt="Ortho Support Pillow" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Ortho Support Pillow</h3>
+                                    <p class="text-gray-500 text-sm mt-1">For a restful sleep</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">320 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                            <!-- Product 4 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Cool Juice 01.jpg" alt="Compact First-Aid Kit" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Compact First-Aid Kit</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Essential for home & travel</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">299 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                          
+                            <!-- Product 6 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Adathodai-1.jpg" alt="Adathodai Syrup" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Adathodai Syrup</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Cough & Cold Relief</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">190 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                            <!-- Product 7 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Adhimathuram Powder-1.jpg" alt="Adhimathuram Powder" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Adhimathuram Powder</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Sore Throat Relief</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">150 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                            <!-- Product 8 -->
+                            <article role="article" class="bg-white rounded-lg shadow-md overflow-hidden group w-80 flex-shrink-0">
+                                <div class="relative overflow-hidden">
+                                    <img src="../images/Cool Juice 01.jpg" alt="Herbal Cool Juice" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="p-6 text-center">
+                                    <h3 class="text-lg font-semibold text-gray-800">Herbal Cool Juice</h3>
+                                    <p class="text-gray-500 text-sm mt-1">Refreshing & Healthy</p>
+                                    <div class="mt-4">
+                                        <span class="text-xl font-bold text-emerald-600">120 rs</span>
+                                    </div>
+                                    <button class="btn btn-primary w-full mt-4">Add to Cart</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <button id="prev-product" aria-label="Previous product" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="next-product" aria-label="Next product" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 p-2 rounded-full text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us -->
+        <section id="contact" role="region" aria-labelledby="contact-heading" class="py-12 md:py-20 bg-white">
+            <div class="container mx-auto px-6 pt-12">
+                <h2 id="contact-heading" class="text-3xl font-bold text-center text-emerald-800 mb-10">Contact Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                                <input type="text" id="name" name="name" required class="form-control mt-1">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" required class="form-control mt-1">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="form-control mt-1">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="form-control mt-1"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary w-full">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Map / Address -->
+                    <div class="bg-gray-100 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-emerald-700 mb-4">Our Main Office</h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            123 Health St, Metropolis, 10001
+                        </p>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            <strong>Phone:</strong> (123) 456-7890<br>
+                            <strong>Email:</strong> contact@almmahospital.com
+                        </p>
+                        <div class="aspect-w-13 aspect-h-9 rounded-md overflow-hidden bg-gray-300">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1816255592134!2d80.22249547585771!3d13.024103163723447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526655c38d2993%3A0x54b714477f05829b!2sAlmaa%20Siddha%20Care%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1763535943222!5m2!1sen!2sin" width="800" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map of our main office"></iframe>
+                            <!-- <div class="w-full h-full flex items-center justify-center text-gray-500">
+                                Google Maps Placeholder -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-emerald-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-center md:text-left">&copy; 2025 Almma Hospital. All rights reserved.</p>
+                <div class="flex mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white" aria-label="Twitter">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white" aria-label="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.438 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top" class="hidden fixed bottom-8 right-8 bg-emerald-600 hover:bg-emerald-700 text-white p-3 rounded-full shadow-lg transition-opacity">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <script src="../src/main.js"></script>
+
+</body>
+</html>
