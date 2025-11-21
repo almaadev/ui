@@ -132,3 +132,24 @@ header {
 footer a:hover {
     text-decoration: underline;
 }
+
+.logo img {
+    max-width: 200px;
+    transition: max-width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 150px;
+    }
+}
+
+.main-logo {
+    max-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .main-logo {
+        max-width: 150px;
+    }
+}
