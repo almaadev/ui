@@ -218,3 +218,26 @@ document.addEventListener('DOMContentLoaded', function () {
         startAutoScroll();
     }
 });
+ document.querySelector("form").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop page reload
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // FIXED ALMAA NUMBER — replace with real number
+      const targetNumber = "917358357615"; // no + sign
+
+      const text =
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Phone: " + phone + "\n" +
+          "Message: " + message;
+
+      const encoded = encodeURIComponent(text);
+
+      const url = `https://wa.me/${targetNumber}?text=${encoded}`;
+
+      window.open(url, "_blank");
+  });
